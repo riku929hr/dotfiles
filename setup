@@ -2,6 +2,14 @@
 
 DOTFILES=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
 
+# zsh
+rm -rf $HOME/.zshrc
+ln -s $DOTFILES/zsh/zshrc $HOME/.zshrc
+
+# prezto
+rm -rf $HOME/.zpreztorc
+ln -s $DOTFILES/zsh/zpreztorc $HOME/.zpreztorc
+
 rm -rf $HOME/.config/kitty
 ln -s $DOTFILES/kitty $HOME/.config/kitty
 
