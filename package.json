@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "secretlint": "secretlint '**/*'"
+  },
+  "devDependencies": {
+    "secretlint": "^8.0.0"
+  }
+}
