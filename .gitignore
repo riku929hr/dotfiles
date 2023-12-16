@@ -1,1 +1,8 @@
+# ignore mac os x hidden files
+.DS_Store
+
+# files with suffix _local are ignored
+*_local
+
+# ignore backup files
 *.bak
