@@ -10,9 +10,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# aliases
-alias "vim"=nvim
-
 # zsh completions
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
@@ -22,7 +19,7 @@ if type brew &>/dev/null; then
 fi
 
 # asdf settings
-. "/usr/local/opt/asdf/libexec/asdf.sh"
+. $(brew --prefix asdf)/libexec/asdf.sh
 PATH=~/.asdf/installs/rust/stable/bin:$PATH
 
 # fzf
