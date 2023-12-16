@@ -24,8 +24,8 @@ ln -s $DOTFILES/lazygit $HOME/.config/lazygit
 
 # git
 mkdir -p $HOME/.config/git
-rm -rf $HOME/.config/git/ignore
-ln -s $DOTFILES/git/ignore $HOME/.config/git/ignore
+rm -rf $HOME/.config/git
+ln -s $DOTFILES/git $HOME/.config/git
 
 # commands
 mkdir -p $HOME/.local/bin
