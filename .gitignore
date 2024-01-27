@@ -1,11 +1,9 @@
-# node_modules is ignored by default
 node_modules
-
-# ignore mac os x hidden files
 .DS_Store
+
+*.bak
+*.log
 
 # files with suffix _local are ignored
 *_local
 
-# ignore backup files
-*.bak

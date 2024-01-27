@@ -1,4 +1,4 @@
-name: secretlint
+name: ci
 on: [push, pull_request]
 
 jobs:
@@ -15,3 +15,12 @@ jobs:
         run: yarn install
       - name: run secretlint
         run: yarn secretlint
+  stylua:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: JohnnyMorganz/stylua-action@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          version: latest
+          args: --check .
