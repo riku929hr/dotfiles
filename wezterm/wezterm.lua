@@ -11,8 +11,8 @@ if wezterm.config_builder then
 end
 
 -- This is where you actually apply your config choices
-config.font = wezterm.font("Hack Nerd Font Mono")
-config.config.font_size = 13.2
+config.font = wezterm.font_with_fallback({ "Hack Nerd Font Mono", "Hiragino Sans", "Yu Gothic" })
+config.font_size = 13.2
 
 -- Color Scheme
 config.color_scheme = "Omni (Gogh)"
