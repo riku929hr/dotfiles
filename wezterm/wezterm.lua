@@ -15,7 +15,7 @@ config.font = wezterm.font_with_fallback({ "Hack Nerd Font Mono", "Hiragino Sans
 config.font_size = 13.2
 
 -- Color Scheme
-config.color_scheme = "Omni (Gogh)"
+config.color_scheme = "Railscasts (dark) (terminal.sexy)"
 
 -- and finally, return the configuration to wezterm
 return config
