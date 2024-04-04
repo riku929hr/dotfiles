@@ -3,3 +3,5 @@
 	email = 33782267+riku929hr@users.noreply.github.com
 [init]
 	defaultBranch = main
+[core]
+    editor = nvim
