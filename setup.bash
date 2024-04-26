@@ -45,3 +45,7 @@ ln -s $DOTFILES/scripts/t $HOME/.local/bin/t
 # neovim
 rm -rf $HOME/.config/nvim
 ln -s $DOTFILES/nvim $HOME/.config/nvim
+
+# npm
+rm -rf $HOME/.default-npm-packages
+ln -s $DOTFILES/npm/default-npm-packages $HOME/.default-npm-packages
