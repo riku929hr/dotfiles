@@ -40,7 +40,8 @@ return {
         "phpcsfixer",
         -- Lua
         "stylua",
-        -- add more arguments for adding more null-ls sources
+        -- bash
+        "shfmt",
       })
     end,
   },
