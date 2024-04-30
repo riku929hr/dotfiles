@@ -1,3 +1,4 @@
+local operating_system=$(uname -a)
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -19,8 +20,12 @@ if type brew &>/dev/null; then
 fi
 
 # asdf settings
-. $(brew --prefix asdf)/libexec/asdf.sh
-PATH=~/.asdf/installs/rust/stable/bin:$PATH
+if [[ $operating_system =~ "Darwin" ]]; then
+  . $(brew --prefix asdf)/libexec/asdf.sh
+  PATH=~/.asdf/installs/rust/stable/bin:$PATH
+else
+  . "$HOME/.asdf/asdf.sh"
+fi
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
