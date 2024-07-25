@@ -21,7 +21,7 @@ return {
         "tsserver",
         "eslint",
         -- lua
-        "lua_ls",
+        -- settings in community.pack.lua
         -- rust
         "rust_analyzer",
         -- ruby
@@ -43,7 +43,7 @@ return {
         -- PHP
         "phpcsfixer",
         -- Lua
-        "stylua",
+        -- settings in community.pack.lua
         -- bash
         "shfmt",
       })
