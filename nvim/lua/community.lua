@@ -6,6 +6,7 @@
 return {
   "AstroNvim/astrocommunity",
   -- language packages
+  { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.rust" },
 
