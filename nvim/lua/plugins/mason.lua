@@ -18,7 +18,7 @@ return {
         -- php
         "intelephense",
         -- ts
-        "tsserver",
+        "ts_ls",
         "eslint",
         -- lua
         -- settings in community.pack.lua
