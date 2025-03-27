@@ -1,9 +1,6 @@
 ---@type LazySpec
 return {
   "nvimtools/none-ls.nvim",
-  dependencies = {
-    "gbprod/none-ls-shellcheck.nvim",
-  },
   opts = function(_, config)
     -- config variable is the default configuration table for the setup function call
     local null_ls = require("null-ls")
@@ -12,9 +9,6 @@ return {
     -- https://github.com/nvimtools/none-ls.nvim/tree/main/lua/null-ls/builtins/formatting
     -- https://github.com/nvimtools/none-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
     config.sources = {
-      -- bash
-      require("none-ls-shellcheck.diagnostics"),
-      require("none-ls-shellcheck.code_actions"),
       -- JavaScript, TypeScript
       null_ls.builtins.formatting.prettier.with({
         condition = function(utils)
