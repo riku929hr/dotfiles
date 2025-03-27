@@ -22,7 +22,7 @@ fi
 # asdf settings
 if [[ $operating_system =~ "Darwin" ]]; then
   . $(brew --prefix asdf)/libexec/asdf.sh
-  PATH=~/.asdf/installs/rust/stable/bin:$PATH
+  PATH="$PATH":~/.asdf/installs/rust/stable/bin
 else
   . "$HOME/.asdf/asdf.sh"
 fi
@@ -35,6 +35,9 @@ PATH=~/.local/bin:$PATH
 
 # lazygit
 export XDG_CONFIG_HOME="$HOME/.config"
+
+# Laravel Sail
+alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 
 # another configuration for local
 if [ -e ~/.zshrc_local ]; then
