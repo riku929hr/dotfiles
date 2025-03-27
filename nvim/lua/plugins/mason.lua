@@ -1,5 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- Customize Mason
 
 ---@type LazySpec
@@ -11,14 +9,29 @@ return {
     opts = {
       -- Make sure to use the names found in `:Mason`
       ensure_installed = {
+        -- css
+        "tailwindcss-language-server",
+        -- docker
+        "dockerfile-language-server",
+        -- python
+        "pyright",
+        -- php
+        "intelephense",
+        -- ts
+        "typescript-language-server",
+        "eslint-lsp",
+        -- lua
+        -- settings in community.pack.lua
+        -- ruby
+        "ruby_lsp",
+        -- markdown
+        "zk",
+
         -- install language servers
         "lua-language-server",
 
         -- install formatters
         "stylua",
-
-        -- install debuggers
-        "debugpy",
 
         -- install any other package
         "tree-sitter-cli",
