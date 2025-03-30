@@ -23,15 +23,9 @@ return {
         -- lua
         -- settings in community.pack.lua
         -- ruby
-        "ruby_lsp",
+        "ruby-lsp",
         -- markdown
         "zk",
-
-        -- install language servers
-        "lua-language-server",
-
-        -- install formatters
-        "stylua",
 
         -- install any other package
         "tree-sitter-cli",
