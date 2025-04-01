@@ -5,14 +5,7 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
-  -- language packages
-  { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.pack.lua" },
-  { import = "astrocommunity.pack.rust" },
-
-  -- completion
-  { import = "astrocommunity.completion.copilot-lua-cmp" },
-
-  -- editing support
-  { import = "astrocommunity.editing-support.refactoring-nvim" },
+  { import = "astrocommunity.pack.cpp" },
+  -- import/override with your plugins folder
 }
