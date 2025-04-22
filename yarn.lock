@@ -37,10 +37,10 @@
     js-tokens "^4.0.0"
     picocolors "^1.0.0"
 
-"@johnnymorganz/stylua-bin@^2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@johnnymorganz/stylua-bin/-/stylua-bin-2.0.2.tgz#f7efea93425a0a647794ac8d2e83a89ed829d938"
-  integrity sha512-RQc3sh8uJE2jIj2WqGOiPvtLa12LPyygOBZW6afv3QX0oa/5GNzSeavjQWk+nD0nQ53UMXJk2x3P0FJEsas3Cw==
+"@johnnymorganz/stylua-bin@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@johnnymorganz/stylua-bin/-/stylua-bin-2.1.0.tgz#d3ea681a4a00eb385fc5fe2760a8e6103d65cbc4"
+  integrity sha512-ztGW8b7uoPEzqaUftCkY27tcLUmFDCRyGIJrf7WKyAd0hpNbF+Q43rmGM71RYD6oQ9JYGUQXXC+r/WZqeTd/Ew==
   dependencies:
     axios "^1.6.0"
     node-fetch "^3.2.10"
