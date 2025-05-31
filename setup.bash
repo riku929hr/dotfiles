@@ -24,6 +24,10 @@ ln -s "$DOTFILES"/kitty "$HOME"/.config/kitty
 rm -rf "$HOME"/.config/wezterm
 ln -s "$DOTFILES"/wezterm "$HOME"/.config/wezterm
 
+# mise
+rm -rf "$HOME"/.config/mise/config.toml
+ln -s "$DOTFILES"/mise/config.toml "$HOME"/.config/mise/config.toml
+
 # tmux
 rm -rf "$HOME"/.tmux.conf
 ln -s "$DOTFILES"/tmux/tmux.conf "$HOME"/.tmux.conf

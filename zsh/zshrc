@@ -19,13 +19,8 @@ if type brew &>/dev/null; then
   compinit
 fi
 
-# asdf settings
-if [[ $operating_system =~ "Darwin" ]]; then
-  . $(brew --prefix asdf)/libexec/asdf.sh
-  PATH="$PATH":~/.asdf/installs/rust/stable/bin
-else
-  . "$HOME/.asdf/asdf.sh"
-fi
+# mise
+eval "$(mise activate zsh)"
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
