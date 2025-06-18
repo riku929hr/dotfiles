@@ -24,8 +24,6 @@ return {
         -- settings in community.pack.lua
         -- ruby
         "ruby-lsp",
-        -- markdown
-        "zk",
 
         -- install any other package
         "tree-sitter-cli",
