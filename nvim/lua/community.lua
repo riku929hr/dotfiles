@@ -8,5 +8,6 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.pack.go" },
-  -- import/override with your plugins folder
+
+  { import = "astrocommunity.completion.copilot-cmp" },
 }
