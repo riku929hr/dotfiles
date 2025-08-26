@@ -7,6 +7,6 @@
   },
   "devDependencies": {
     "@johnnymorganz/stylua-bin": "^2.1.0",
-    "secretlint": "^10.2.0"
+    "secretlint": "^11.2.0"
   }
 }
