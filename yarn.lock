@@ -28,10 +28,10 @@
   resolved "https://registry.yarnpkg.com/@babel/helper-validator-identifier/-/helper-validator-identifier-7.27.1.tgz#a7054dcc145a967dd4dc8fee845a57c1316c9df8"
   integrity sha512-D2hP9eA+Sqx1kBZgzxZh0y1trbuU+JoDkiEwqhQ36nodYqJwyEIhPSdMNd7lOm/4io72luTPWH20Yda0xOuUow==
 
-"@johnnymorganz/stylua-bin@^2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@johnnymorganz/stylua-bin/-/stylua-bin-2.1.0.tgz#d3ea681a4a00eb385fc5fe2760a8e6103d65cbc4"
-  integrity sha512-ztGW8b7uoPEzqaUftCkY27tcLUmFDCRyGIJrf7WKyAd0hpNbF+Q43rmGM71RYD6oQ9JYGUQXXC+r/WZqeTd/Ew==
+"@johnnymorganz/stylua-bin@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@johnnymorganz/stylua-bin/-/stylua-bin-2.2.0.tgz#deada8d424cae7b9b3a5d24d4f537672353cb3e3"
+  integrity sha512-nKa+dr/dFUpr3txDP8fJxfKZfX8ccP0/F+FDNGrZQ6YzUhUlAauvP8NRDNnoD8fbyCmIyQA/099Pi46oiFVrSg==
   dependencies:
     axios "^1.6.0"
     node-fetch "^3.2.10"

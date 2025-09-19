@@ -6,7 +6,7 @@
     "check-format": "stylua --check **/*.lua"
   },
   "devDependencies": {
-    "@johnnymorganz/stylua-bin": "^2.1.0",
+    "@johnnymorganz/stylua-bin": "^2.2.0",
     "secretlint": "^11.2.0"
   }
 }
