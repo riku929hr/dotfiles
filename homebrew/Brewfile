@@ -1,5 +1,3 @@
-tap "homebrew/bundle"
-tap "homebrew/core"
 brew "giflib"
 brew "libpng"
 brew "openssl@3"
