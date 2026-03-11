@@ -1,0 +1,6 @@
+font-family = "Monaspace Neon"
+font-size = 13.2
+
+window-padding-x = 4
+window-padding-y = 4
+window-decoration = false
