@@ -26,10 +26,6 @@ ln -s "$DOTFILES"/wezterm "$HOME"/.config/wezterm
 rm -rf "$HOME"/.config/ghostty
 ln -s "$DOTFILES"/ghostty "$HOME"/.config/ghostty
 
-mkdir -p "$HOME"/.config/mise
-rm -rf "$HOME"/.config/mise/config.toml
-ln -s "$DOTFILES"/mise/config.toml "$HOME"/.config/mise/config.toml
-
 rm -rf "$HOME"/.config/lazygit
 ln -s "$DOTFILES"/lazygit "$HOME"/.config/lazygit
 
