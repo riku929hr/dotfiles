@@ -1,0 +1,19 @@
+# Global configuration for deck
+basePresentationID: "1Lj2QlmlVigSXO1a13IU85jee_wEi-86yeTL0xuV9xEs"
+breaks: true
+# codeBlockToImageCommand: "go run testdata/txt2img/main.go"
+folderID: "1Hb0a-gEL7viLtBxZJCRuLGh-6Gd8bxi6"
+
+defaults:
+  # First page should always use title layout
+  - if: page == 1
+    layout: title
+  # Pages with only one title and one H2 heading use section layout
+  - if: titles.size() == 1 && headings[2].size() == 1
+    layout: with-placeholder
+  # Skip pages with TODO in speaker notes
+  - if: speakerNote.contains("TODO")
+    skip: true
+  # Default layout for all other pages
+  - if: true
+    layout: blank-with-title
