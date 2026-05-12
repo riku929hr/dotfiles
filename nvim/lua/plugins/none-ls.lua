@@ -1,14 +1,13 @@
 ---@type LazySpec
 return {
   "nvimtools/none-ls.nvim",
-  opts = function(_, config)
-    -- config variable is the default configuration table for the setup function call
+  opts = function(_, opts)
     local null_ls = require("null-ls")
 
     -- Check supported formatters and linters
     -- https://github.com/nvimtools/none-ls.nvim/tree/main/lua/null-ls/builtins/formatting
     -- https://github.com/nvimtools/none-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
-    config.sources = {
+    opts.sources = require("astrocore").list_insert_unique(opts.sources, {
       -- JavaScript, TypeScript
       null_ls.builtins.formatting.prettier.with({
         condition = function(utils)
@@ -29,7 +28,6 @@ return {
       null_ls.builtins.formatting.stylua.with({
         condition = function(utils) return utils.root_has_file({ ".stylua.toml", "stylua.toml" }) end,
       }),
-    }
-    return config -- return final config table
+    })
   end,
 }
