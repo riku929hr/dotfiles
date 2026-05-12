@@ -2,63 +2,47 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Repository Overview
+## リポジトリ概要
 
-This is a personal dotfiles repository containing configuration files for various development tools and applications. The repository uses symbolic links to deploy configurations to their appropriate locations in the home directory.
+シンボリックリンクを使用してホームディレクトリに設定ファイルをデプロイする個人用dotfilesリポジトリ。
 
-## Key Commands
+## 主要コマンド
 
-### Setup and Installation
-- `./setup.bash` - Install and symlink all dotfiles to home directory
-- `brew bundle` - Install all Homebrew packages from Brewfile
+### セットアップとインストール
+- `./setup.bash` - 全dotfilesをホームディレクトリにシンボリックリンクして配置
+- `brew bundle` - `homebrew/Brewfile` から全Homebrewパッケージをインストール
 
-### Code Quality and Formatting
-- `npm run secretlint` - Check for secrets in all files
-- `npm run format` - Format all Lua files using stylua
-- `npm run check-format` - Check Lua formatting without making changes
+### コード品質とフォーマット
+- `npm run secretlint` - 全ファイルのシークレット漏洩チェック
+- `npm run format` - styluaで全Luaファイルをフォーマット
+- `npm run check-format` - Luaフォーマットの確認のみ（変更なし）
 
-### Development Tools
-- `t` - Custom tmux session manager script (located in scripts/t)
-- `lazygit` - Git TUI for repository management
-- `mise` - Runtime version manager (replaces asdf)
+## アーキテクチャと構成
 
-## Architecture and Structure
+### シンボリックリンクのデプロイ先
+`setup.bash` が各設定を以下にリンクする：
+- `ghostty/` → `~/.config/ghostty`
+- `nvim/` → `~/.config/nvim`
+- `zsh/zshrc` → `~/.zshrc`、`zsh/zpreztorc` → `~/.zpreztorc`
+- `tmux/tmux.conf` → `~/.tmux.conf`
+- `scripts/t` → `~/.local/bin/t`
+- `mise/config.toml` → `~/.config/mise/config.toml`
+- `npm/default-npm-packages` → `~/.default-npm-packages`
 
-### Configuration Management
-- **Symlink-based deployment**: All configurations are symlinked from this repository to their target locations
-- **Centralized Brewfile**: Package management through Homebrew Bundle
-- **Modular organization**: Each tool has its own directory with focused configuration
+### Neovim設定
+`nvim/` はAstroNvim v5+をベースに構成：
+- `nvim/lua/lazy_setup.lua` - lazy.nvimのエントリポイント。AstroNvim本体・`community.lua`・`plugins/`をインポート
+- `nvim/lua/plugins/` - 各プラグインのカスタマイズ（`astrocore.lua`でキーマップ・vim options、`astrolsp.lua`でLSP設定）
+- `nvim/lua/polish.lua` - lazy.setup後に実行される最終設定
+- `nvim/selene.toml` - Luaリンター設定（`std = "neovim"`）
+- リーダーキー: `<Space>`、ローカルリーダー: `,`
 
-### Key Directories
-- `nvim/` - Neovim configuration using AstroNvim v5+ framework
-- `wezterm/` - Terminal emulator configuration
-- `zsh/` - Shell configuration with zprezto
-- `tmux/` - Terminal multiplexer configuration
-- `git/` - Git configuration and global ignore rules
-- `mise/` - Runtime version manager configuration
-- `scripts/` - Custom utility scripts
+### Ubuntu向けスクリプト
+- `ubuntu/` - Linux環境用のセットアップスクリプト（`apt-install.bash`、`lazygit.bash`、`monaspace.bash`）
 
-### Neovim Configuration
-- Built on AstroNvim v5+ framework
-- Plugin configuration in `nvim/lua/plugins/`
-- Custom plugins include claude.lua and avante.lua for AI assistance
-- Uses lazy.nvim for plugin management
-- Configured with LSP, formatters, and development tools
-
-### Package Management
-- Homebrew for system packages and applications
-- npm for JavaScript/Node.js tools
-- mise for programming language runtime versions
-
-### Development Environment
-- Terminal: WezTerm with custom configuration
-- Shell: Zsh with zprezto framework
-- Git: Custom configuration with global ignore rules
-- Editor: Neovim with comprehensive plugin setup
-
-## Important Files
-- `setup.bash` - Main installation script
-- `Brewfile` - Homebrew package definitions
-- `package.json` - npm scripts and dependencies
-- `scripts/t` - tmux session manager (credit to ThePrimeagen)
-- `nvim/lazy-lock.json` - Neovim plugin version lock file
+## 重要ファイル
+- `setup.bash` - メインインストールスクリプト
+- `homebrew/Brewfile` - Homebrewパッケージ定義
+- `package.json` - npmスクリプトと依存関係
+- `scripts/t` - tmuxセッションマネージャー（ThePrimeagen方式）
+- `nvim/lazy-lock.json` - Neovimプラグインバージョンロックファイル

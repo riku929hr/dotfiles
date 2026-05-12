@@ -44,3 +44,6 @@ fi
 
 # Added by Antigravity
 export PATH="/Users/rikuto/.antigravity/antigravity/bin:$PATH"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /Users/rikuto/.local/share/nvim/mason/bin/terraform terraform

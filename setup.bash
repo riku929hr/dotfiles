@@ -29,11 +29,11 @@ ln -s "$DOTFILES"/ghostty "$HOME"/.config/ghostty
 rm -rf "$HOME"/.config/lazygit
 ln -s "$DOTFILES"/lazygit "$HOME"/.config/lazygit
 
-rm -rf "$HOME"/.config/git
-ln -s "$DOTFILES"/git "$HOME"/.config/git
-
 rm -rf "$HOME"/.config/nvim
 ln -s "$DOTFILES"/nvim "$HOME"/.config/nvim
+
+rm -rf "$HOME"/.config/deck
+ln -s "$DOTFILES"/deck "$HOME"/.config/deck
 
 # other locations
 rm -rf "$HOME"/.tmux.conf
