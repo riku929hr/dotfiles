@@ -13,13 +13,13 @@
       // 検索系 (<Leader>f*)
       "space f f": "file_finder::Toggle",
       "space f w": "pane::DeploySearch",
-      "space f o": "tab_switcher::Toggle",
+      "space f o": "tab_switcher::ToggleAll",
       "space f b": "tab_switcher::Toggle",
       "space f C": "command_palette::Toggle",
       "space f p": "projects::OpenRecent",
 
       // ファイル・バッファ系 (<Leader>e/o/c/C/w/q/n)
-      "space e": "project_panel::ToggleFocus",
+      "space e": "workspace::ToggleLeftDock",
       "space o": "project_panel::ToggleFocus",
       "space c": "pane::CloseActiveItem",
       "space C": "pane::CloseAllItems",
@@ -75,6 +75,13 @@
       "ctrl-j": "workspace::ActivatePaneDown",
       "ctrl-k": "workspace::ActivatePaneUp",
       "ctrl-l": "workspace::ActivatePaneRight"
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      // パネル内からも <Leader>e で閉じられるように (AstroNvim の neo-tree 同様)
+      "space e": "workspace::ToggleLeftDock"
     }
   }
 ]
