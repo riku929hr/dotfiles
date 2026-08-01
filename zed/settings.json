@@ -7,10 +7,22 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "project_panel": {
+    "entry_spacing": "standard",
+    "dock": "left"
+  },
+  "which_key": {
+    "enabled": true
+  },
+  "ui_font_family": "Monaspace Neon",
+  "buffer_line_height": "comfortable",
+  "buffer_font_family": "Monaspace Neon",
+  "icon_theme": "Zed (Default)",
   "terminal": {
     "font_family": "Monaspace Neon"
   },
   "agent": {
+    "dock": "right",
     "auto_compact": {
       "enabled": false
     },
@@ -33,7 +45,7 @@
   },
   "base_keymap": "VSCode",
   "ui_font_size": 16,
-  "buffer_font_size": 15,
+  "buffer_font_size": 14.0,
   "theme": {
     "mode": "system",
     "light": "One Light",
