@@ -2,8 +2,8 @@
   "license": "MIT",
   "scripts": {
     "secretlint": "secretlint '**/*'",
-    "format": "stylua **/*.lua",
-    "check-format": "stylua --check **/*.lua"
+    "format": "stylua .",
+    "check-format": "stylua --check ."
   },
   "devDependencies": {
     "@johnnymorganz/stylua-bin": "^2.5.2",

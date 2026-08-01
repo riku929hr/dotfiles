@@ -1,0 +1,87 @@
+// Zed keymap
+//
+// AstroNvim (Neovim) の leader (<Space>) 系マッピングを Zed の action に対応付ける。
+// 実際に使っているバインドは AstroNvim 上流のデフォルト由来（nvim/lua/plugins/astrocore.lua
+// はテンプレートのまま）。Zed に対応機能が無いもの（セッション管理、<Leader>u* トグル群、
+// lazygit など）は移植対象外。
+//
+// gd / gD / gI / gy / gr / K は Zed vim モードの既定バインドが AstroNvim と一致するため未定義。
+[
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      // 検索系 (<Leader>f*)
+      "space f f": "file_finder::Toggle",
+      "space f w": "pane::DeploySearch",
+      "space f o": "tab_switcher::ToggleAll",
+      "space f b": "tab_switcher::Toggle",
+      "space f C": "command_palette::Toggle",
+      "space f p": "projects::OpenRecent",
+
+      // ファイル・バッファ系 (<Leader>e/o/c/C/w/q/n)
+      "space e": "workspace::ToggleLeftDock",
+      "space o": "project_panel::ToggleFocus",
+      "space c": "pane::CloseActiveItem",
+      "space C": "pane::CloseAllItems",
+      "space w": "workspace::Save",
+      "space q": "workspace::CloseWindow",
+      "space n": "workspace::NewFile",
+
+      // Git (<Leader>g*)
+      "space g g": "git_panel::ToggleFocus",
+      "space g b": "git::Blame",
+
+      // ターミナル (<Leader>tf)
+      "space t f": "terminal_panel::Toggle",
+
+      // LSP (<Leader>l*)
+      "space l r": "editor::Rename",
+      "space l a": "editor::ToggleCodeActions",
+      "space l f": "editor::Format",
+      "space l R": "editor::FindAllReferences",
+      "space l d": "editor::Hover",
+      "space l D": "diagnostics::Deploy",
+      "space l s": "outline::Toggle",
+      "space l G": "project_symbols::Toggle",
+
+      // コメント切替 (<Leader>/)
+      "space /": "editor::ToggleComments",
+
+      // 分割・ペイン (<Leader>|, <Leader>-)
+      "space |": "pane::SplitRight",
+      "space -": "pane::SplitDown",
+
+      // Claude Code (<Leader>Ac)
+      "space A c": "agent::ToggleFocus",
+
+      // ブラケット系 (]b/[b, ]d/[d)
+      "] b": "pane::ActivateNextItem",
+      "[ b": "pane::ActivatePreviousItem",
+      "] d": "editor::GoToDiagnostic",
+      "[ d": "editor::GoToPreviousDiagnostic",
+
+      // ペイン移動 (<C-h/j/k/l>)
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      // ペイン移動 (<C-h/j/k/l>) — エディタ外にフォーカスがあるとき用のフォールバック
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight"
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      // パネル内からも <Leader>e で閉じられるように (AstroNvim の neo-tree 同様)
+      "space e": "workspace::ToggleLeftDock"
+    }
+  }
+]
