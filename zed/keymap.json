@@ -2,10 +2,13 @@
 //
 // AstroNvim (Neovim) の leader (<Space>) 系マッピングを Zed の action に対応付ける。
 // 実際に使っているバインドは AstroNvim 上流のデフォルト由来（nvim/lua/plugins/astrocore.lua
-// はテンプレートのまま）。Zed に対応機能が無いもの（セッション管理、<Leader>u* トグル群、
-// lazygit など）は移植対象外。
+// はテンプレートのまま。git 系は gitsigns.lua / snacks.lua / toggleterm.lua のデフォルト）。
+// Zed に対応機能が無いもの（セッション管理、<Leader>u* トグル群、commits/stash picker、
+// hunk preview inline、[G/]G など）は移植対象外。lazygit(<Leader>gg) は git_panel::ToggleFocus
+// で代替。
 //
 // gd / gD / gI / gy / gr / K は Zed vim モードの既定バインドが AstroNvim と一致するため未定義。
+// （<Leader>gr は上記 gr とは prefix が異なるため衝突しない）
 [
   {
     "context": "VimControl && !menu",
@@ -29,7 +32,13 @@
 
       // Git (<Leader>g*)
       "space g g": "git_panel::ToggleFocus",
-      "space g b": "git::Blame",
+      "space g l": "git::Blame",
+      "space g b": "branches::OpenRecent",
+      "space g d": "git::Diff",
+      "space g s": "git::StageAndNext",
+      "space g S": "git::StageFile",
+      "space g r": "git::Restore",
+      "space g R": "git::RestoreFile",
 
       // ターミナル (<Leader>tf)
       "space t f": "terminal_panel::Toggle",
@@ -54,11 +63,13 @@
       // Claude Code (<Leader>Ac)
       "space A c": "agent::ToggleFocus",
 
-      // ブラケット系 (]b/[b, ]d/[d)
+      // ブラケット系 (]b/[b, ]d/[d, ]g/[g)
       "] b": "pane::ActivateNextItem",
       "[ b": "pane::ActivatePreviousItem",
       "] d": "editor::GoToDiagnostic",
       "[ d": "editor::GoToPreviousDiagnostic",
+      "] g": "editor::GoToHunk",
+      "[ g": "editor::GoToPreviousHunk",
 
       // ペイン移動 (<C-h/j/k/l>)
       "ctrl-h": "workspace::ActivatePaneLeft",
