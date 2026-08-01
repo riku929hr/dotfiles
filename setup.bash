@@ -35,6 +35,12 @@ ln -s "$DOTFILES"/nvim "$HOME"/.config/nvim
 rm -rf "$HOME"/.config/deck
 ln -s "$DOTFILES"/deck "$HOME"/.config/deck
 
+mkdir -p "$HOME"/.config/zed
+rm -rf "$HOME"/.config/zed/settings.json
+ln -s "$DOTFILES"/zed/settings.json "$HOME"/.config/zed/settings.json
+rm -rf "$HOME"/.config/zed/keymap.json
+ln -s "$DOTFILES"/zed/keymap.json "$HOME"/.config/zed/keymap.json
+
 # other locations
 rm -rf "$HOME"/.tmux.conf
 ln -s "$DOTFILES"/tmux/tmux.conf "$HOME"/.tmux.conf
