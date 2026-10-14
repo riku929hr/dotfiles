@@ -28,41 +28,41 @@
   resolved "https://registry.yarnpkg.com/@babel/helper-validator-identifier/-/helper-validator-identifier-7.28.5.tgz#010b6938fab7cb7df74aa2bbc06aa503b8fe5fb4"
   integrity sha512-qSs4ifwzKJSV39ucNjsvc6WVHs6b7S03sOh2OcHF9UHfVPqWWALUsNUVzhSBiItjRZoLHx7nIarVjqKVusUZ1Q==
 
-"@johnnymorganz/stylua-bin-darwin-arm64@2.5.2":
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/@johnnymorganz/stylua-bin-darwin-arm64/-/stylua-bin-darwin-arm64-2.5.2.tgz#7b7cd2a2a65e49e2ca702597df60e7b514090d4e"
-  integrity sha512-aoUX8+aG7x/hXSYMEkpH7YEvQ9AK/V/qY5SUBOqK4g5iBK9hjfOrFqYWRYo14BG+9QEEeKv0SY5iUviMUpyn0g==
+"@johnnymorganz/stylua-bin-darwin-arm64@2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@johnnymorganz/stylua-bin-darwin-arm64/-/stylua-bin-darwin-arm64-2.6.0.tgz#edfefcfb3370ba13127552b0a5d825e88fb52355"
+  integrity sha512-1ZNdL7CV/dvxslxL31g+6EZnmBkU1SCP1tIItYoBJa2VlCkZMD615IqDybwlRWV6+ezeGd7ThZnQXotC6v6E9g==
 
-"@johnnymorganz/stylua-bin-darwin-x64@2.5.2":
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/@johnnymorganz/stylua-bin-darwin-x64/-/stylua-bin-darwin-x64-2.5.2.tgz#20f0136515950cf916d4ab142e851577e1dd0874"
-  integrity sha512-TP+TweORn5qs2NIn1ejTQ5vVDmCwch43WgCnfqIbdSx/txvlr3bVbWO5NeiEzdI2XO6gDFzFi9X6FIK1UNS7qQ==
+"@johnnymorganz/stylua-bin-darwin-x64@2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@johnnymorganz/stylua-bin-darwin-x64/-/stylua-bin-darwin-x64-2.6.0.tgz#1de815b57e4595e9eddbbada309f35c21ba9b8c8"
+  integrity sha512-t7H7ppnMXTjGBMCth5x1WnzCMCVi9yUy0swuftoD0q9y+0GUClW4nolrqXqZY+GuXjPe8aJHxdWtVJHVai/n+g==
 
-"@johnnymorganz/stylua-bin-linux-arm64@2.5.2":
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/@johnnymorganz/stylua-bin-linux-arm64/-/stylua-bin-linux-arm64-2.5.2.tgz#bbb48cf632503927b3c51f76ddb6551504d29ef7"
-  integrity sha512-zffjBoMQpzP1AnnhVrg1k/8zNrI9VTKQ/hie/baD3y5mgOHe4/YJ33uo0dZeI+uZAu5gdanmvM5fQtPxnGc6xQ==
+"@johnnymorganz/stylua-bin-linux-arm64@2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@johnnymorganz/stylua-bin-linux-arm64/-/stylua-bin-linux-arm64-2.6.0.tgz#3e78ad65015f34392dde38248066e04206f27285"
+  integrity sha512-y1LrXAUPxK549l8yiOMLmlddyLrQGDWKMbIMAumHNoBxYqe2jjBBfJ4hyATRsCqldxGLYFNjeJdcdiBxlM8nrw==
 
-"@johnnymorganz/stylua-bin-linux-x64@2.5.2":
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/@johnnymorganz/stylua-bin-linux-x64/-/stylua-bin-linux-x64-2.5.2.tgz#ccbeb88d002b9f8772932412fad9c1be6fb7963f"
-  integrity sha512-5NfzgN3lnlgmFcPCmhlyHr7y3Ro6wmPNBYzjVFLJKqJtwMPgSgKKzfT93s2rkX/QZKIlZelLtQ7eHVDmULegSg==
+"@johnnymorganz/stylua-bin-linux-x64@2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@johnnymorganz/stylua-bin-linux-x64/-/stylua-bin-linux-x64-2.6.0.tgz#0aae6c3ec74356db5b8409009558c2631c0963d8"
+  integrity sha512-VxwSG6XqTvwe6ELV0YwWEo/PASR0tqwUhHWfBxhY4bBtYR7OB6PxJMXsFAl7m5MZKnFFl1TzUCcXY3au6gSGTA==
 
-"@johnnymorganz/stylua-bin-win32-x64@2.5.2":
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/@johnnymorganz/stylua-bin-win32-x64/-/stylua-bin-win32-x64-2.5.2.tgz#2bc6e5ffa908f73ae24affb462d00751a9cb3a42"
-  integrity sha512-wasLSN1Z9O0t6v6km/7cnBqtJe1oUX+Mgojba56hveR67i2F97bETu2GroSeCNuuCdXxUXIbZ+tf9b8CVyF1pA==
+"@johnnymorganz/stylua-bin-win32-x64@2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@johnnymorganz/stylua-bin-win32-x64/-/stylua-bin-win32-x64-2.6.0.tgz#baf149558d67967b8ecf7f8c2152fdca5c44163c"
+  integrity sha512-XGzxXAXgbUdiAZNZFKgU8M3jfsTkNv+YbnfJnC2OL3ZG/sfS2FqJeIU0g+PhdLyubbdaQPMjBQYdjh+PI2ITpw==
 
-"@johnnymorganz/stylua-bin@^2.5.2":
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/@johnnymorganz/stylua-bin/-/stylua-bin-2.5.2.tgz#73b3d8cf062f628e6ddde6c49af1c2cc6a9da659"
-  integrity sha512-9VXOyPCoyajvLOZMiEGigNovEYI7PaAXB065Mc2iiU/vOmAxb+GpbGpCPjLq1jIy8VNU+4Esh50EmLc0SMfziw==
+"@johnnymorganz/stylua-bin@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@johnnymorganz/stylua-bin/-/stylua-bin-2.6.0.tgz#a7e2a928b9f1eecaa223bc7748918841204691e8"
+  integrity sha512-cg3vKROljsCbPGIIxOuo+zNAulOjzarSzC6jijT8x3Y69NdFPjFktV8l3pxUBOh8hM9lRJheJ71qGCQVzBFQQw==
   optionalDependencies:
-    "@johnnymorganz/stylua-bin-darwin-arm64" "2.5.2"
-    "@johnnymorganz/stylua-bin-darwin-x64" "2.5.2"
-    "@johnnymorganz/stylua-bin-linux-arm64" "2.5.2"
-    "@johnnymorganz/stylua-bin-linux-x64" "2.5.2"
-    "@johnnymorganz/stylua-bin-win32-x64" "2.5.2"
+    "@johnnymorganz/stylua-bin-darwin-arm64" "2.6.0"
+    "@johnnymorganz/stylua-bin-darwin-x64" "2.6.0"
+    "@johnnymorganz/stylua-bin-linux-arm64" "2.6.0"
+    "@johnnymorganz/stylua-bin-linux-x64" "2.6.0"
+    "@johnnymorganz/stylua-bin-win32-x64" "2.6.0"
 
 "@secretlint/config-creator@13.0.7":
   version "13.0.7"
