@@ -4,10 +4,6 @@ DOTFILES=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 
 mkdir -p "$HOME"/.config
 
-# homebrew
-rm -rf "$HOME"/Brewfile
-ln -s "$DOTFILES"/homebrew/Brewfile "$HOME"/Brewfile
-
 # zsh
 rm -rf "$HOME"/.zshrc
 ln -s "$DOTFILES"/zsh/zshrc "$HOME"/.zshrc

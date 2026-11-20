@@ -10,7 +10,6 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### セットアップとインストール
 - `./setup.bash` - 全dotfilesをホームディレクトリにシンボリックリンクして配置
-- `brew bundle` - `homebrew/Brewfile` から全Homebrewパッケージをインストール
 
 ### コード品質とフォーマット
 - `npm run secretlint` - 全ファイルのシークレット漏洩チェック
@@ -42,7 +41,6 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 重要ファイル
 - `setup.bash` - メインインストールスクリプト
-- `homebrew/Brewfile` - Homebrewパッケージ定義
 - `package.json` - npmスクリプトと依存関係
 - `scripts/hw` - Herdr の Workspace 切り替え（fzf で選んだディレクトリの Workspace にフォーカス、なければ作成）
 - `nvim/lazy-lock.json` - Neovimプラグインバージョンロックファイル
