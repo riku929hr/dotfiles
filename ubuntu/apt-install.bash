@@ -4,7 +4,7 @@ sudo apt update
 # libs
 sudo apt install -y shellcheck
 # tools
-sudo apt install -y neovim zsh tmux git curl wget ripgrep fzf gnome-tweaks
+sudo apt install -y neovim zsh git curl wget ripgrep fzf gnome-tweaks
 # deps for asdf-php
 sudo apt install -y locate
 # deps for ruby

@@ -1,0 +1,9 @@
+onboarding = false
+
+[theme]
+name = "one-dark"
+auto_switch = false
+
+[keys]
+# tmux 時代の C-q を指が覚えているため引き継ぐ
+prefix = "ctrl+q"

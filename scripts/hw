@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+# Herdr workspace switcher: ThePrimeagen の tmux-sessionizer を Herdr の Workspace に置き換えたもの
+set -euo pipefail
+
+if [[ $# -eq 1 ]]; then
+    selected=$1
+else
+    selected=$( { find ~ -maxdepth 1 -mindepth 1 -type d; echo /tmp; } | fzf ) || exit 0
+fi
+
+label=$(basename "$selected" | sed 's/\./_/g')
+
+# workspace focus は ID しか受け付けないため、label から workspace_id を引く。
+# 見つかれば ID を stdout に出し、なければ何も出さない。
+find_workspace_id() {
+    local label=$1
+    # 手動で同名 Workspace を作った場合も focus に複数 ID を渡さないよう、先頭の1件だけ返す
+    herdr workspace list |
+        jq -r --arg l "$label" 'first(.result.workspaces[] | select(.label == $l) | .workspace_id) // empty'
+}
+
+# サーバー未起動だと socket API が使えないので、そのときは cd して起動するだけにする
+if ! herdr workspace list >/dev/null 2>&1; then
+    cd "$selected" && exec herdr
+fi
+
+id=$(find_workspace_id "$label")
+if [[ -n "$id" ]]; then
+    herdr workspace focus "$id" >/dev/null
+else
+    herdr workspace create --cwd "$selected" --label "$label" --focus >/dev/null
+fi
+
+# Herdr のペイン内から herdr を起動すると入れ子になりブロックされるので、外にいるときだけアタッチする
+if [[ "${HERDR_ENV:-}" != "1" ]]; then
+    exec herdr
+fi

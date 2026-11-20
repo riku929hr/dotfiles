@@ -35,6 +35,11 @@ ln -s "$DOTFILES"/nvim "$HOME"/.config/nvim
 rm -rf "$HOME"/.config/deck
 ln -s "$DOTFILES"/deck "$HOME"/.config/deck
 
+# ~/.config/herdr には socket・ログ・セッション状態も置かれるので、config.toml だけをリンクする
+mkdir -p "$HOME"/.config/herdr
+rm -rf "$HOME"/.config/herdr/config.toml
+ln -s "$DOTFILES"/herdr/config.toml "$HOME"/.config/herdr/config.toml
+
 mkdir -p "$HOME"/.config/zed
 rm -rf "$HOME"/.config/zed/settings.json
 ln -s "$DOTFILES"/zed/settings.json "$HOME"/.config/zed/settings.json
@@ -42,12 +47,10 @@ rm -rf "$HOME"/.config/zed/keymap.json
 ln -s "$DOTFILES"/zed/keymap.json "$HOME"/.config/zed/keymap.json
 
 # other locations
-rm -rf "$HOME"/.tmux.conf
-ln -s "$DOTFILES"/tmux/tmux.conf "$HOME"/.tmux.conf
-
 mkdir -p "$HOME"/.local/bin
 rm -rf "$HOME"/.local/bin/t
-ln -s "$DOTFILES"/scripts/t "$HOME"/.local/bin/t
+rm -rf "$HOME"/.local/bin/hw
+ln -s "$DOTFILES"/scripts/hw "$HOME"/.local/bin/hw
 
 # npm
 rm -rf "$HOME"/.default-npm-packages

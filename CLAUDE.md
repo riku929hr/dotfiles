@@ -24,8 +24,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `ghostty/` → `~/.config/ghostty`
 - `nvim/` → `~/.config/nvim`
 - `zsh/zshrc` → `~/.zshrc`、`zsh/zpreztorc` → `~/.zpreztorc`
-- `tmux/tmux.conf` → `~/.tmux.conf`
-- `scripts/t` → `~/.local/bin/t`
+- `herdr/config.toml` → `~/.config/herdr/config.toml`（ディレクトリには実行時ファイルが置かれるためファイル単位）
+- `scripts/hw` → `~/.local/bin/hw`
 - `mise/config.toml` → `~/.config/mise/config.toml`
 - `npm/default-npm-packages` → `~/.default-npm-packages`
 
@@ -44,5 +44,5 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `setup.bash` - メインインストールスクリプト
 - `homebrew/Brewfile` - Homebrewパッケージ定義
 - `package.json` - npmスクリプトと依存関係
-- `scripts/t` - tmuxセッションマネージャー（ThePrimeagen方式）
+- `scripts/hw` - Herdr の Workspace 切り替え（fzf で選んだディレクトリの Workspace にフォーカス、なければ作成）
 - `nvim/lazy-lock.json` - Neovimプラグインバージョンロックファイル
