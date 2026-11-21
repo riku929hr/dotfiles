@@ -31,6 +31,9 @@ PATH=~/.local/bin:$PATH
 # lazygit
 export XDG_CONFIG_HOME="$HOME/.config"
 
+export EDITOR=nvim
+export VISUAL=nvim
+
 # Laravel Sail
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 
