@@ -4,6 +4,12 @@ onboarding = false
 name = "one-dark"
 auto_switch = false
 
+# herdr には tmux の is_vim 相当が無く、直接キーは nvim のキーを奪うため prefix 配下のみにする
 [keys]
-# tmux 時代の C-q を指が覚えているため引き継ぐ
 prefix = "ctrl+q"
+detach = "prefix+d"
+split_vertical = "prefix+|"
+split_horizontal = ["prefix+minus", "prefix+backslash"]
+last_pane = "prefix+semicolon"
+previous_workspace = "prefix+("
+next_workspace = "prefix+)"
