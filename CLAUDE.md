@@ -25,7 +25,6 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `zsh/zshrc` → `~/.zshrc`、`zsh/zpreztorc` → `~/.zpreztorc`
 - `herdr/config.toml` → `~/.config/herdr/config.toml`（ディレクトリには実行時ファイルが置かれるためファイル単位）
 - `scripts/hw` → `~/.local/bin/hw`
-- `mise/config.toml` → `~/.config/mise/config.toml`
 - `npm/default-npm-packages` → `~/.default-npm-packages`
 
 ### Neovim設定
